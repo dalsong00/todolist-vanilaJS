@@ -1,17 +1,43 @@
 const $ = (selector) => document.querySelector(selector);
 
 const updateItemCount = () => {
-  const itemCount = document.querySelectorAll("li").length;
+  const itemCount = document.querySelectorAll("li").length; // 외부 컨텍스트 변수 접근, 외부로 빠져야 된다.
   $("#item-count").innerText = `${itemCount} item left`;
   if (itemCount === 0) {
     removeVisibleClass();
   }
 };
 
+const itemCount = document.querySelectorAll("li").length; // 외부 컨텍스트 변수 접근, 외부로 빠져야 된다.
+$("#item-count").innerText = newUpdateItemCount(itemCount);
+
+const newUpdateItemCount = (itemCount) => {
+  return `${itemCount} item left`;
+};
+
 const removeVisibleClass = () => {
   $("#item-under-container").classList.remove("visible");
   $("#checkIcon").classList.remove("visible");
 };
+
+// 역할과 책임, 관심사~~~
+const removeClass = (selector) => {
+  // 중복 코드 제거
+  $(selector).classList.remove("visible");
+};
+
+const initVisible = () => {
+  // 코드 재사용성 높임
+  removeClass("#item-under-container");
+  removeClass("#checkIcon");
+};
+
+// 객체지향 =>
+// 인터페이스 =>
+// 클래스 =>
+// 메소드 =>
+// solid
+// design pattern
 
 function App() {
   // 🌕 [추가하기]
