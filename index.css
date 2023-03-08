@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  font-size: 100px;
+  color: rgb(255, 150, 150);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.main {
+  position: relative;
+}
+
+#new-item {
+  width: 550px;
+  height: 70px;
+  padding: 16px 16px 16px 60px;
+  font-size: 24px;
+  border: 1px solid lightgray;
+}
+
+.new-item::placeholder {
+  color: #d6d3d3;
+}
+
+#checkIcon.visible {
+  display: inline-block;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 30px;
+  background-color: transparent;
+  border: none;
+  color: lightgray;
+  cursor: pointer;
+}
+
+#checkIcon.visible.clicked {
+  color: rgb(70, 70, 70);
+}
+
+#todo-item-list {
+  margin: 0;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 550px;
+  height: 60px;
+  list-style: none;
+  font-size: 24px;
+  border: 1px solid lightgray;
+}
+
+.todo-container {
+  width: 100%;
+  display: relative;
+}
+
+.todo-item:hover.remove {
+  position: absolute;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.remove {
+  /* display: none; */
+  position: absolute;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.toggle {
+  margin: 0 20px 0 20px;
+}
+
+input[type="checkbox"] {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+.item-content.checked {
+  color: lightgray;
+  text-decoration: line-through;
+}
+
+.invisible {
+  display: none;
+}
+
+#item-under-container.visible {
+  display: flex;
+  width: 550px;
+  height: 40px;
+  padding: 10px;
+  border: 1px solid lightgray;
+}
+
+#filter-section {
+  margin-left: 100px;
+}
+
+#filter-section button {
+  margin: 0 5px;
+  background-color: transparent;
+  border: 1px solid gray;
+  cursor: pointer;
+}
+
+.updateItemContent {
+  width: 510px;
+  height: 40px;
+  margin-left: 20px;
+  border: 1px solid lightgray;
+  font: 20px;
+}

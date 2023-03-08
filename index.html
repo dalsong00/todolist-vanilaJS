@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todos</title>
+    <link rel="stylesheet" href="./index.css" />
+    <script defer src="./index.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="title">Todos</h1>
+      </header>
+      <section class="main">
+        <div id="inputNewItemSection">
+          <input
+            id="new-item"
+            type="text"
+            placeholder="What needs to be done?"
+          />
+          <button id="checkIcon" class="invisible">∨</button>
+        </div>
+        <ul id="todo-item-list">
+          <!-- item 이 추가되는 영역 -->
+        </ul>
+        <div id="item-under-container" class="invisible">
+          <span id="item-count"></span>
+          <div id="filter-section">
+            <button id="all-btn">All</button>
+            <button id="active-btn">Active</button>
+            <button id="completed-btn">Completed</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
